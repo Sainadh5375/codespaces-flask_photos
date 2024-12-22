@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Friendship Mode</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 2.5rem;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px;
+        }
+        .gallery img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+        a {
+            margin-top: 20px;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 5px;
+        }
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <h1>Friendship Mode: Photo Album</h1>
+    <div class="gallery">
+        {% for image in images %}
+        <img src="{{ image }}" alt="Image">
+        {% endfor %}
+    </div>
+</body>
+</html>

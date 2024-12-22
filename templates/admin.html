@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Upload</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
+            color: white;
+            text-align: center;
+        }
+        h1 {
+            margin-top: 50px;
+            font-size: 2.5rem;
+        }
+        form {
+            margin-top: 30px;
+            display: inline-block;
+            background: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        label {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            display: block;
+        }
+        input[type="file"] {
+            margin: 10px 0;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        button {
+            background-color: #6a11cb;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #2575fc;
+        }
+        a {
+            display: block;
+            margin-top: 20px;
+            color: white;
+            font-size: 1rem;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin: Upload Multiple Images</h1>
+    <form action="/admin" method="post" enctype="multipart/form-data">
+        <label for="files">Choose images:</label>
+        <input type="file" name="files" id="files" multiple required>
+        <button type="submit">Upload</button>
+    </form>
+    <a href="/user">View Album</a>
+</body>
+</html>
